@@ -1,0 +1,18 @@
+{
+  "name": "todolistapi",
+  "version": "1.0.0",
+  "description": "test node rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start":"nodemon server.js"
+  },
+  "author": "phobosjr",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
