@@ -1,6 +1,6 @@
-module.exports = function(app) { 
-	var todoList = require('../controllers/todoListController');
+'use strict'
 
-// todoList Routes 
-app.route('/tasks') .get({name:'test',password:'123'})
-	app.route('/tasks/:taskId') .get(todoList.read_a_task) .put(todoList.update_a_task) .delete(todoList.delete_a_task); };
+exports.all_tasks = function(req,res){
+res.json({name:'test',PID:'123'});
+
+};
