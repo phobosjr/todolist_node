@@ -6,12 +6,16 @@ var model = require('../models/todoListModel');
 
 exports.get_task = function (req, res) {
 	
-	let task = model.get_task(req.params.id);
-	if (task) { 
-		res.json(tasks[index])
-	} else { 
-		res.json("task not found");
-	} }
+	model.get_task(req.params.id,function(response){
+		if (response) { 
+			res.json(response)
+		} else { 
+			res.json("task not found");
+		} });
+
+
+	};
+	
 
 exports.all_task = function (req, res) {
 	res.json(model.get_all_task);
