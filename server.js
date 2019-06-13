@@ -3,9 +3,10 @@ var express = require('express'),
 	port = process.env.PORT || 3000;
 app.listen(port);
 
-app.configure(function(){
-	app.use(express.bodyParser());
-})
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 
 
