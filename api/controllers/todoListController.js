@@ -7,7 +7,8 @@ var model = require('../models/todoListModel');
 exports.get_task = function (req, res) {
 	
 	model.get_task(req.params.id,function(response){
-		if (response) { 
+		console.log(response);
+		if (response != null) { 
 			res.json(response)
 		} else { 
 			res.json("task not found");

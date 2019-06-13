@@ -31,17 +31,13 @@ exports.get_all_task= function(result){
 exports.get_task = function(id , result ){
 	console.log(id)
 	con.query("select * from task where task_id = "+id,function(err,res){
-		console.log(res);
 	if(err){
-	console.log("error: ",err);
-	result(err,null);
+			result(err,null);
 
 	}else{
-	result(null,res);
+		result(null,res);
 
 	}
-
-
 });
 
 
