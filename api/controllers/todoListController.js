@@ -22,8 +22,9 @@ exports.all_task = function (req, res) {
 	res.json(model.get_all_task);
 };
 exports.create_task = function (req, res) { 
+	console.log(req.body);
 	if (req != null && req.body) {
-		console.log(req.body);
+	
 		let task = req.body;
 		model.get_task(task.task_id,function(response){
 			if (response.length > 0) { 
