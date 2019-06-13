@@ -23,6 +23,7 @@ exports.all_task = function (req, res) {
 };
 exports.create_task = function (req, res) { 
 	console.log(req.body);
+	console.log(res.body);
 	if (req != null && req.body) {
 	
 		let task = req.body;
