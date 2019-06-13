@@ -5,8 +5,9 @@ var model = require('../models/todoListModel');
 
 
 exports.get_task = function (req, res) {
-	let index = isTaskExist(req.params.id);
-	if (index >= 0) { 
+	
+	let task = model.get_task(req.params.id);
+	if (task) { 
 		res.json(tasks[index])
 	} else { 
 		res.json("task not found");
