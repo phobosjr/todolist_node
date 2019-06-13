@@ -32,10 +32,10 @@ exports.get_task = function(id , result ){
 	console.log(id)
 	con.query("select * from task where task_id = "+id,function(err,res){
 	if(err){
-			result(err,null);
+			result(err);
 
 	}else{
-		result(null,res);
+		result(res);
 
 	}
 });
