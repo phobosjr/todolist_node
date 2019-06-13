@@ -22,11 +22,8 @@ exports.all_task = function (req, res) {
 	res.json(model.get_all_task);
 };
 exports.create_task = function (req, res) { 
-	console.log(req.body);
-	console.log(res.body);
 	if (req != null && req.body) {
-	
-		let task = req.body;
+	let task = req.body;
 		model.get_task(task.task_id,function(response){
 			if (response.length > 0) { 
 				res.json("Record already exist")
