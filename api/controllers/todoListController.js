@@ -23,7 +23,7 @@ exports.all_task = function (req, res) {
 };
 exports.create_task = function (req, res) { 
 	if (req != null) {
-		console.log(req.body);
+		console.log(req);
 		let task = req.body;
 		model.get_task(task.task_id,function(response){
 			if (response.length > 0) { 

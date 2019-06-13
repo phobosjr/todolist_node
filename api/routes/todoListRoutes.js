@@ -13,7 +13,4 @@ app.route('/task/:id')
 .delete(todoList.delete_task);
 
 
-
-
-
 }
