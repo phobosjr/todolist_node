@@ -6,6 +6,7 @@ app.use(function(req,res,next){
 	console.log('Time',Date.now());
 	console.log('Request Type',req.method);	
 	console.log('Request Url',req.originalUrl);	
+	console.log(req.body);
 next();
 })
 
