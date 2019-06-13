@@ -8,7 +8,7 @@ exports.get_task = function (req, res) {
 	
 	model.get_task(req.params.id,function(response){
 		console.log(response);
-		if (response != null) { 
+		if (response.length > 0) { 
 			res.json(response)
 		} else { 
 			res.json("task not found");
