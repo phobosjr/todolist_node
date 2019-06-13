@@ -14,5 +14,8 @@
   },
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "dependancies":{
+  "db" : ">= 1.00.x"
   }
 }
