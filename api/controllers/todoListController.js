@@ -23,15 +23,17 @@ exports.all_task = function (req, res) {
 };
 exports.create_task = function (req, res) { 
 	if (req != null) {
-		let index = isTaskExist(req.body.task_id);
-		if(index >= 0){
-			res.json("task already exist ")
-		}else{ 
-			let new_task = req.body;
-			tasks.push(new_task);
-			res.json(new_task);
-		} 
-	}
+		let task = req.body;
+		model.get_task(req.body.task_id,function(response){
+			if (response.length > 0) { 
+				res.json("Record already exist")
+			} else { 
+					model.create_task(task,function(response){
+						res.json("1 record inserted");
+					})			
+			} 
+		});
+		};
 }
 exports.delete_task = function (req, res) {
 	if (req != null) {
