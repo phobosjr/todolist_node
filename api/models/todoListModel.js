@@ -13,7 +13,7 @@ con.connect();
 
 exports.get_all_task= function(result){
 	con.query("select * from task ",function(err,res){
-
+		console.log(res);
 	if(err){
 	console.log("error: ",err);
 	result(err,null);
