@@ -16,10 +16,10 @@ exports.get_all_task = function (result) {
 		console.log(res);
 		if (err) {
 			console.log("error: ", err);
-			result(err, null);
+			result(err);
 
 		} else {
-			result(null, res);
+			result(res);
 
 		}
 
