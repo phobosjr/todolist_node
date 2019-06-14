@@ -14,11 +14,10 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "bootstrap": "^4.3.1",
-    "express": "^4.16.4",
-    "mysql": "^2.17.1"
+<<<<<<< HEAD
+   "express": "^4.16.4"
   },
- "dependancies":{
+  "dependancies":{
   "db" : ">= 1.00.x"
 =======
     "bootstrap": "^4.3.1",
