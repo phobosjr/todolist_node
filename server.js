@@ -9,6 +9,7 @@ var express = require('express'),
 var bodyParser = require('body-parser');
 app.listen(port);
 
+app.set('view engine','ejs');
 
 //
 app.use(bodyParser.urlencoded({ extended: false }))
