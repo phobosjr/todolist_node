@@ -45,12 +45,15 @@ exports.create_task = function (req, res) {
 }
 exports.delete_task = function (req, res) {
 	if (req != null) {
-		let index = isTaskExist(req.params.id);
-		if (index >= 0) {
-			tasks.splice(1, index); res.json('Task N°' + req.params.id + ' deleted ');
-		} else { 
-			res.json('Task N°' + req.params.id + ' not found ');
-		}
+		model.delete_task(req.params.id,function(){
+			if (index >= 0) {
+				tasks.splice(1, index); res.json('Task N°' + req.params.id + ' deleted ');
+			} else { 
+				res.json('Task N°' + req.params.id + ' not found ');
+			}
+
+		});
+		
 	}
 }
 function isTaskExist(task_id) { 
