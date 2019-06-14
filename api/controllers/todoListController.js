@@ -19,7 +19,13 @@ exports.get_task = function (req, res) {
 	
 
 exports.all_task = function (req, res) {
-	res.json(model.get_all_task);
+	model.get_all_task(function(response){
+		if(response.length > 0){
+			res.json(response)
+		}else{
+			res.json("empty tasks");
+		}
+	})
 };
 exports.create_task = function (req, res) { 
 	if (req != null && req.body) {
