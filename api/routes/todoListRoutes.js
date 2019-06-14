@@ -5,7 +5,7 @@ var todoList = require('../controllers/todoListController');
 
 app.route('/')
 .get(function(req,res){
-    res.render('views/pages/index');
+    res.render('/pages/index');
 })
 
 app.route('/tasks')
