@@ -45,9 +45,9 @@ exports.create_task = function (req, res) {
 }
 exports.delete_task = function (req, res) {
 	if (req != null) {
-		model.delete_task(req.params.id,function(){
-			if (index >= 0) {
-				tasks.splice(1, index); res.json('Task N°' + req.params.id + ' deleted ');
+		model.delete_task(req.params.id,function(response){
+			if (response >= 0) {
+				 res.json('Task N°' + req.params.id + ' deleted ');
 			} else { 
 				res.json('Task N°' + req.params.id + ' not found ');
 			}
