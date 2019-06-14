@@ -6,7 +6,7 @@ var todoList = require('../controllers/todoListController');
 app.route('/')
 .get(function(req,res){
     res.render('pages/index',{
-        title="home"
+        title:"home"
     });
 })
 app.route('/about')
