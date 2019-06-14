@@ -46,7 +46,7 @@ exports.create_task = function (req, res) {
 exports.delete_task = function (req, res) {
 	if (req != null) {
 		model.delete_task(req.params.id,function(response){
-			
+			console.log(response);
 			if (response === 1) {
 				 res.json('Task N°' + req.params.id + ' deleted ');
 			} else { 
