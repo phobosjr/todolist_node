@@ -7,6 +7,10 @@ app.route('/')
 .get(function(req,res){
     res.render('pages/index');
 })
+app.route('/about')
+.get(function(req,res){
+    res.render('pages/about');
+})
 
 app.route('/tasks')
 .get(todoList.all_task)
