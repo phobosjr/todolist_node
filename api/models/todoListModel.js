@@ -67,7 +67,7 @@ exports.delete_task = function (id, result) {
 		if (err) {
 			result(err);
 		} else {
-			result(res);
+			result(res.insertId);
 		}
 	});
 
