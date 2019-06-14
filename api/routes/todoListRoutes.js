@@ -4,7 +4,7 @@ module.exports = function(app){
 var todoList = require('../controllers/todoListController');
 
 app.route('/')
-.get('/',function(req,res){
+.get(function(req,res){
     res.render('/views/pages/index');
 })
 
