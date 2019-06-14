@@ -14,9 +14,17 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+<<<<<<< HEAD
     "express": "^4.16.4"
   },
   "dependancies":{
   "db" : ">= 1.00.x"
+=======
+    "express": "^4.16.4",
+    "mysql": "^2.17.1"
+  },
+  "dependancies": {
+    "db": ">= 1.00.x"
+>>>>>>> d3d76d3aac7559adfb251498a69a315245df8d2c
   }
 }

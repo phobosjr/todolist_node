@@ -10,19 +10,19 @@ var bodyParser = require('body-parser');
 app.listen(port);
 
 app.set('view engine','ejs');
-
 //
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> d3d76d3aac7559adfb251498a69a315245df8d2c
 var routes = require('./api/routes/todoListRoutes');
-
 routes(app);
-
 console.log('todo list RestFul API server started on: '+port);
