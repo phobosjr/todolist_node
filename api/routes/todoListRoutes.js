@@ -5,11 +5,15 @@ var todoList = require('../controllers/todoListController');
 
 app.route('/')
 .get(function(req,res){
-    res.render('pages/index');
+    res.render('pages/index',{
+        title="home"
+    });
 })
 app.route('/about')
 .get(function(req,res){
-    res.render('pages/about');
+    res.render('pages/about',{
+        title="about"
+    });
 })
 
 app.route('/tasks')
