@@ -12,7 +12,7 @@ app.route('/')
 app.route('/about')
 .get(function(req,res){
     res.render('pages/about',{
-        title="about"
+        title:"about"
     });
 })
 
